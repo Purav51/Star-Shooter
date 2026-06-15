@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d5f1d1e9746250408383b16a435ac1e, type: 3}
-  m_Name: Wave0
+  m_Name: Wave 0
   m_EditorClassIdentifier: Assembly-CSharp::WaveConfigSO
-  pathprefab: {fileID: 0}
+  pathprefab: {fileID: 1008148101971748890, guid: 2ad7d653ccfdf664f84d1d23b5d3ff43, type: 3}
   enemyMoveSpeed: 5
