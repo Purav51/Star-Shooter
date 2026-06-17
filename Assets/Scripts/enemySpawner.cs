@@ -1,21 +1,32 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class enemySpawner : MonoBehaviour
 {
     [SerializeField] WaveConfigSO currentWave;
+    [SerializeField] float timeBetweenWaves = 1f;
+    [SerializeField] WaveConfigSO[] WaveConfigs;
     void Start()
     {
-        SpawnEnemies();
+        StartCoroutine(SpawnEnemies());
     }
-    void SpawnEnemies()
+    IEnumerator SpawnEnemies()
     {
-        for (int i = 0; i < currentWave.GetEnemyCount(); i++)
+        foreach (WaveConfigSO wave in WaveConfigs)
         {
-            Instantiate(currentWave.GetenemyPrefabIndex(i), 
-            currentWave.GetStartingWayPoints().position, 
-            Quaternion.identity,
-            transform);
+            currentWave = wave;
+            for (int i = 0; i < currentWave.GetEnemyCount(); i++)
+            {
+                Instantiate(currentWave.GetenemyPrefabIndex(i),
+                currentWave.GetStartingWayPoints().position,
+                Quaternion.identity,
+                transform);
+
+                yield return new WaitForSeconds(currentWave.GetRandEnemySpawnTime());
+            }
+            // wave ends
+            yield return new WaitForSeconds(timeBetweenWaves); // wait before the start of next wave. 
         }
 
     }

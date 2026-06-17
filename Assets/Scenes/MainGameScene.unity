@@ -286,6 +286,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::enemySpawner
   currentWave: {fileID: 11400000, guid: 09362ea32fd9a234cbfda2755d837dec, type: 2}
+  timeBetweenWaves: 1.4
+  WaveConfigs:
+  - {fileID: 11400000, guid: 09362ea32fd9a234cbfda2755d837dec, type: 2}
+  - {fileID: 11400000, guid: 1795de42439d66948b70b2eda9ff0095, type: 2}
+  - {fileID: 11400000, guid: 09362ea32fd9a234cbfda2755d837dec, type: 2}
+  - {fileID: 11400000, guid: 1795de42439d66948b70b2eda9ff0095, type: 2}
 --- !u!4 &1993081959
 Transform:
   m_ObjectHideFlags: 0
