@@ -354,10 +354,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6460269470715260951, guid: d44e4b119d45ed346b0e3284ec9cfcdc, type: 3}
-      propertyPath: UpBoundPadding
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 8150400237525839615, guid: d44e4b119d45ed346b0e3284ec9cfcdc, type: 3}
       propertyPath: m_Name
       value: Player
