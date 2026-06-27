@@ -2,21 +2,26 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
-    InputAction moveAction;
 
     Vector3 moveVector;
     Vector2 minBounds;
     Vector2 maxBounds;
-    [SerializeField] float moveSpeed = 10;
+    [SerializeField] float moveSpeed = 10f;
     [SerializeField] float LeftBoundPadding ;
     [SerializeField] float RightBoundPadding ;
     [SerializeField] float UpBoundPadding ;
     [SerializeField] float DownBoundPadding ;
 
+    Sooter playerShooter;
+    InputAction moveAction;
+    InputAction fireAction;
+
 
     void Start()
     {
+        playerShooter = GetComponent<Sooter>();
         moveAction = InputSystem.actions.FindAction("Move");
+        fireAction = InputSystem.actions.FindAction("Fire");
         InitBounds();
     }
 
@@ -24,6 +29,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         movePlayer();
+        FireShooter();
     }
     void InitBounds()
     {
@@ -38,5 +44,10 @@ public class PlayerController : MonoBehaviour
         newPos.x = Mathf.Clamp(newPos.x, minBounds.x + LeftBoundPadding, maxBounds.x - RightBoundPadding);
         newPos.y = Mathf.Clamp(newPos.y, minBounds.y + DownBoundPadding, maxBounds.y - UpBoundPadding);
         transform.position = newPos; 
+    }
+
+    void FireShooter()
+    {
+        playerShooter.isFiring = fireAction.IsPressed();
     }
 }
