@@ -7,10 +7,18 @@ public class Sooter : MonoBehaviour
     [SerializeField] float projectileSpeed = 10f;
     [SerializeField] float projectileLifeTime = 5f;
     [SerializeField] float projectileFireRate = 0.2f;
+    [SerializeField] bool UseAI;
 
+    [HideInInspector] public bool isFiring;
     Coroutine FireCo;
-    public bool isFiring;
 
+    void Start()
+    {
+        if (UseAI)
+        {
+            isFiring = true;
+        }
+    }
     void Update()
     {
         Fire();
@@ -36,9 +44,11 @@ public class Sooter : MonoBehaviour
         while (true)
         {
             GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity); //instantiate projectile in this specific position and without changing rotation 
+
+            projectile.transform.rotation = transform.rotation;
             
             Rigidbody2D projectileRb = projectile.GetComponent<Rigidbody2D>();
-            projectileRb.linearVelocityY = projectileSpeed;
+            projectileRb.linearVelocity = transform.up *projectileSpeed;
 
             Destroy(projectile, projectileLifeTime);
 
