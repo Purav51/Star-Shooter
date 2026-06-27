@@ -121,7 +121,7 @@ Transform:
   m_GameObject: {fileID: 8150400237525839615}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e0216c740d9894ea4d0602c25a23ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  health: 50
+  health: 100
 --- !u!114 &5139384307055453477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,5 +236,8 @@ MonoBehaviour:
   projectilePrefab: {fileID: 7422465720644800976, guid: 81d83db87925a1744babdd103d86d66c, type: 3}
   projectileSpeed: 15
   projectileLifeTime: 5
-  projectileFireRate: 0.2
+  BaseFireRate: 0.2
   isFiring: 0
+  MinFirerate: 0.2
+  FireRateVariance: 0
+  UseAI: 0
