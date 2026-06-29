@@ -48,10 +48,10 @@ MonoBehaviour:
   projectileSpeed: 10
   projectileLifeTime: 5
   BaseFireRate: 1
+  isFiring: 0
   MinFirerate: 0.5
   FireRateVariance: 0.4
   UseAI: 1
-  isFiring: 0
 --- !u!1 &4246847629218216026
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,6 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   health: 50
+  hitParticles: {fileID: 4729359092081634292, guid: 3d9e38410124a5e48a11f1434a5d1b68, type: 3}
 --- !u!114 &1988884170782874896
 MonoBehaviour:
   m_ObjectHideFlags: 0
