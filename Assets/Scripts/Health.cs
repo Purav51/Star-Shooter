@@ -3,9 +3,15 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] int health = 50;
+    [SerializeField] int health;
     [SerializeField] ParticleSystem hitParticles;
+    [SerializeField] bool applyCameraShake;
+    CameraShake cameraShake; 
 
+    void Start() 
+    {
+        cameraShake = Camera.main.GetComponent<CameraShake>();
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         // Check if the collision happend with a damage dealer
@@ -24,6 +30,10 @@ public class Health : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+        }
+        if (applyCameraShake)
+        {
+            cameraShake.PlayShakeEffect();
         }
     }
     void PlayerHitParticles()
