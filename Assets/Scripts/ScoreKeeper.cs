@@ -14,7 +14,7 @@ public class ScoreKeeper : MonoBehaviour
     {
         currentScore += ScoretoAdd;
         currentScore = Mathf.Clamp(currentScore, 0, int.MaxValue); //ensure score doesn't go below 0.
-        print(currentScore);
+        // print(currentScore);
     }
     public void ResetScore()
     {
