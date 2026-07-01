@@ -5,6 +5,28 @@ public class ScoreKeeper : MonoBehaviour
 {
     int currentScore = 0;
 
+    static ScoreKeeper instance;
+
+    void Awake()
+    {
+        ManageSingleton();
+    }
+    void ManageSingleton()
+    {
+        // int instanceCount = FindObjectsByType<AudioManager>(FindObjectsSortMode.None).Length;
+        // if(instanceCount > 1)
+
+        if (instance != null)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
     public int GetCurrentScore()
     {
         return currentScore;
@@ -19,5 +41,5 @@ public class ScoreKeeper : MonoBehaviour
     public void ResetScore()
     {
         currentScore = 0;
-    } 
+    }
 }

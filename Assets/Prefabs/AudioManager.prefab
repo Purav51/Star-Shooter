@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   shootingClip: {fileID: 8300000, guid: bf432c29812cea944a89d9fac0d88ab4, type: 3}
-  ShootingVolume: 0.196
+  ShootingVolume: 0.39
   damageClip: {fileID: 8300000, guid: 988a16a63224b634a8c41c1c11bf136c, type: 3}
   DamageVolume: 0.489
 --- !u!82 &2325578320421596359
@@ -62,7 +62,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 413272bf1b44d6245a7e74831323d0df, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.504
+  m_Volume: 0.649
   m_Pitch: 1
   Loop: 1
   Mute: 0
