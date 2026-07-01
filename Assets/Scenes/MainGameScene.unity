@@ -1060,6 +1060,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1795de42439d66948b70b2eda9ff0095, type: 2}
   - {fileID: 11400000, guid: 09362ea32fd9a234cbfda2755d837dec, type: 2}
   - {fileID: 11400000, guid: 3e475f6dbae1b574d8e8764c4b3a9d76, type: 2}
+  - {fileID: 11400000, guid: 1d626b81db31c514cb0a71ecca6a0ecd, type: 2}
+  - {fileID: 11400000, guid: 98dea57e953440549a275b44ecfb9143, type: 2}
+  - {fileID: 11400000, guid: 1795de42439d66948b70b2eda9ff0095, type: 2}
+  - {fileID: 11400000, guid: 09362ea32fd9a234cbfda2755d837dec, type: 2}
+  - {fileID: 11400000, guid: 3e475f6dbae1b574d8e8764c4b3a9d76, type: 2}
+  - {fileID: 11400000, guid: 98dea57e953440549a275b44ecfb9143, type: 2}
   isLooping: 1
 --- !u!4 &1993081959
 Transform:
