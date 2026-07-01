@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -256,6 +257,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 378488b6e4fc9b2488c8fd1f1633d3fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraShake
+  ShakeDuration: 0.35
+  ShakeMagnitude: 0.28
 --- !u!1 &1115926752
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,6 +548,7 @@ MonoBehaviour:
   WaveConfigs:
   - {fileID: 11400000, guid: 1795de42439d66948b70b2eda9ff0095, type: 2}
   - {fileID: 11400000, guid: 09362ea32fd9a234cbfda2755d837dec, type: 2}
+  - {fileID: 11400000, guid: 3e475f6dbae1b574d8e8764c4b3a9d76, type: 2}
   isLooping: 1
 --- !u!4 &1993081959
 Transform:

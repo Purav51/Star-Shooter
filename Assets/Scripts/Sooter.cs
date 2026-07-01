@@ -11,17 +11,19 @@ public class Sooter : MonoBehaviour
     [SerializeField] float projectileSpeed = 10f;
     [SerializeField] float projectileLifeTime = 5f;
     [SerializeField] float BaseFireRate = 0.2f;
-    [HideInInspector] public bool isFiring;
-    Coroutine FireCo;
 
     [Header("AI Variables")] 
     [SerializeField] float MinFirerate = 0.2f;
     [SerializeField] float FireRateVariance = 0f;
     [SerializeField] bool UseAI;
 
+    [HideInInspector] public bool isFiring;
+    Coroutine FireCo;
+    AudioManager audioManager; 
 
     void Start()
     {
+        audioManager = FindFirstObjectByType<AudioManager>();
         if (UseAI)
         {
             isFiring = true;
@@ -62,6 +64,8 @@ public class Sooter : MonoBehaviour
 
             float waitTime = Random.Range(BaseFireRate - FireRateVariance, BaseFireRate + FireRateVariance);
             waitTime = Mathf.Clamp(waitTime, MinFirerate, float.MaxValue);
+
+            audioManager.PlayShootingSFX();
 
             yield return new WaitForSeconds(waitTime);
         }
